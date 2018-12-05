@@ -1,5 +1,5 @@
 angular.module("tutorialCtrlModule",[])
-.controller("TutorialCtrl", ['$scope', "Calculations", function($scope, Calculations){
+.controller("TutorialCtrl", ['$scope', function($scope){
     
     $scope.tutorialObject = {};
     $scope.tutorialObject.title = "Main page";
@@ -12,26 +12,9 @@ angular.module("tutorialCtrlModule",[])
     
 
     $scope.timesTwo =function(){
-        $scope.tutorialObject.bindOutput = Calculations.timesTwo($scope.tutorialObject.bindOutput);
+        $scope.tutorialObject.bindOutput *=2;
     }
-    Calculations.pythagoreanTheorem();
 }])
-.directive("tbWelcomeMessage", function(){
-    return{
-        restrict: "AE", //E = element; A = attribute
-        template: "<div>Howdy how are you</div>"
-    }
-})
-
-.factory("Calculations", function(){
-    var calculations = {};
-
-    calculations.timesTwo = function(a){
-        return a*2;
-    }
-
-    calculations.pythagoreanTheorem = function(a, b){
-        return (a*a)+(b*b);
-    }
-    return calculations;
-})
+.controller("TutorialCtrl2", ["$scope", function($scope){
+    $scope.secondTutorial = "this is the second tutorial";
+}]);

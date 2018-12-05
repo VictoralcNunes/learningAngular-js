@@ -14,17 +14,20 @@
     <h2>{{tutorialObject.subTitle}}</h2>
 
     <p>Number: {{2 + 2}}</p>
-    <p>String: {{tutorialObject.firstName + " " + tutorialObject.lastName}}</p>
-    <p><b>Binding: {{tutorialObject.bindOutput}}</b></p>
+    <p>String: {{tutorialObject.firstName + " " + tutorialObject.lastName | uppercase}}</p>
+    <p><b>Binding: {{tutorialObject.bindOutput | currency:'R$'}}</b></p>
 
    
     <button ng-click="timesTwo()">Multiply</button>
     <br><br>
     <label>First name</label>
-    <input ng-model="tutorialObject.firstName">
+    <input ng-model="tutorialObject.firstName | uppercase">
     <br>
     <label>Last name</label>
-    <input ng-model="tutorialObject.lastName">
-    <tb-welcome-message></welcome-message>    
+    <input ng-model="tutorialObject.lastName | lowercase">
+    <br>
+    <span tb-welcome-message></span>
+    <tb-welcome-message></tb-welcome-message>
+
 </body>
 </html>

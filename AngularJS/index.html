@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="tutorialApp">
+<head>
+    <meta charset="utf-8" />
+    <title>Tutorial App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controllers/tutorialCtrl.js"></script>
+</head>
+<body ng-controller="TutorialCtrl">
+    <hr />
+    <h1>{{tutorialObject.title}}</h1>
+    <h2>{{tutorialObject.subTitle}}</h2>
+
+    <p>Number: {{2 + 2}}</p>
+    <p>String: {{tutorialObject.firstName + " " + tutorialObject.lastName}}</p>
+    <p><b>Binding: {{tutorialObject.bindOutput}}</b></p>
+
+   
+    <button ng-click="timesTwo()">Multiply</button>
+    <br><br>
+    <label>First name</label>
+    <input ng-model="tutorialObject.firstName">
+    <br>
+    <label>Last name</label>
+    <input ng-model="tutorialObject.lastName">
+    <tb-welcome-message></welcome-message>    
+</body>
+</html>

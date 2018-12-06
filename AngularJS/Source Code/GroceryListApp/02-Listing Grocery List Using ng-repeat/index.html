@@ -29,12 +29,14 @@
         </div>
     </div>
 </nav>
-
+ 
 <div class="container" ng-controller="GroceryListItemsController">
     <div class="col-xs-12">
         <ul class="list-group">
             <li ng-repeat="item in groceryItems" class="list-group-item text-center clearfix">
-                <span style="font-weight: bold">{{item.itemName}}</span>
+                <span style="font-weight: bold">
+                    {{item.itemName}}
+                </span>
             </li>
         </ul>
     </div>

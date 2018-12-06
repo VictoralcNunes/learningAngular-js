@@ -6,7 +6,7 @@ var app = angular.module('groceryListApp', []);
 app.controller("HomeController", ["$scope", function($scope) {
     $scope.appTitle = "Grocery List";
 }]);
-
+ 
 app.controller("GroceryListItemsController", ["$scope", function($scope){
 
     $scope.groceryItems = [

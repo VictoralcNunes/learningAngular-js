@@ -16,7 +16,7 @@ app.config(function($routeProvider){
         .when("/addItem/:id/:cat",{
             templateUrl: "views/addItem.html",
             controller: "GroceryListItemsController"
-        })
+        }) 
         .otherwise({
             redirectTo: "/"
         })
